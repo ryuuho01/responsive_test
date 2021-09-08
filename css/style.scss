@@ -1,0 +1,726 @@
+body {
+  font-family: 'Shippori Mincho', serif;
+  background: rgb(22, 22, 22);
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+/*--------------------- header--------------------- */
+.header {
+  position: relative;
+  .header__pic {
+    .img-header {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+  }
+  .header__pic2 {
+    display: none;
+  }
+  .header__txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    display: flex;
+    text-align: left;
+    padding: 20px 40px;
+    .header-ttl {
+      font-size: 30px;
+    }
+    /*--------------------- ↓js↓ --------------------- */
+    .menu {
+      display: none;
+    }
+    .nav{
+      display: none;
+    }
+    /*--------------------- ↑js↑ --------------------- */
+    .header-nav {
+      padding-left: 104px;
+      .header-nav-list {
+      display: flex;
+      font-size: 16px;
+      padding-top: 13px;
+        .header-nav-item {
+          padding-right: 40px;
+        }
+      }
+    }
+  }
+  .header__para {
+    position: absolute;
+    top: 54%;
+    left: 10%;
+    text-align: center;
+    color: white;
+    .header-para-txt1 {
+      font-size: 60px;
+      font-weight: bold;
+    }
+    .header-para-txt2 {
+      font-size: 22px;
+      padding-top: 28px;
+    }
+  }
+  .header__para2 {
+    display: none;
+  }
+}
+/*--------------------- main--------------------- */
+.card__content {
+  display: flex;
+  .card-type1 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .card-type2 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .card-type3 {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  .img-card {
+    width: 100%;
+  }
+  .card-txt {
+    position: absolute;
+    top: 56%;
+    padding: 0 20px;
+  }
+  .card-ttl {
+    color: white;
+    font-size: 26px;
+  }
+  .card-para {
+    padding-top: 27px;
+    line-height: 27px;
+    color: white;
+    font-size: 16px;
+  }
+}
+.style__content {
+  height: 1200px;
+  width: 100%;
+  background: linear-gradient(black, white);
+  .style__content-ttl {
+    padding: 76px 0px 0px 150px;
+    height: 105px;
+    color: white;
+    font-size: 50px;
+  }
+  .style__content-box {
+    width: 1000px;
+    margin: auto;
+    .style__content-card1 {
+      display: flex;
+      justify-content: space-between;
+    }
+    .style__content-card2 {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .style__content-card1-2 {
+      display: none;
+    }
+    .style__content-card2-2 {
+      display: none;
+    }
+    .style__content-card3-2 {
+      display: none;
+    }
+  }
+}
+.about__content {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background: black;
+  .img-about {
+    width: 470px;
+    height: 650px;
+    padding-left: 65px;
+    padding-top: 60px;
+  }
+  .about__content-para {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    color: white;
+    padding-right: 70px;
+    .para-ttl1 {
+      font-size: 24px;
+      margin-bottom: 22px;
+    }
+    .para-ttl2 {
+      font-size: 40px;
+      margin-bottom: 27px;
+    }
+    .para-txt1 {
+      margin-top: 60px;
+      font-size: 16px;
+      line-height: 25px;
+      margin-bottom: 22px;
+    }
+    .para-txt2 {
+      font-size: 16px;
+      line-height: 25px;
+      margin-bottom: 22px;
+    }
+    .button {
+      padding: 16px 40px;
+      color: white;
+      font-size: 16px;
+      border: solid 2px white;
+      background: black;
+    }
+    .button:hover {
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+  }
+}
+/*---------------------footer--------------------- */
+.footer {
+  background: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  height: 43px;
+  font-size: 16px;
+  padding-top: 80px;
+}
+
+@media screen and (max-width: 768px) {
+
+/*--------------------- header--------------------- */
+  .header {
+    .header__pic {
+      width: 1260px;
+      height: 600px;
+    }
+    .header__txt {
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      background: black;
+      width: 100%;
+      .menu {
+        display: inline-block;
+        width: 36px;
+        height: 32px;
+        cursor: pointer;
+        z-index: 101;
+        .line-top,
+        .line-middle,
+        .line-bottom {
+          width: 33px;
+          height: 4px;
+          background:white;
+          border-radius: 20px;
+          position: absolute;
+          transition: 0.5s;
+        }
+        .line-top {
+          right: 130px;
+          top: 15px;
+        }
+        .line-middle {
+          right: 130px;
+          top: 27px;
+        }
+        .line-bottom {
+          right: 130px;
+          top: 39px;
+        }
+      }
+      .open span:nth-of-type(1) {
+        top: 39px;
+        transform: rotate(45deg);
+      }
+      .open span:nth-of-type(2) {
+        opacity: 0;
+      }
+      .open span:nth-of-type(3) {
+        top: 39px;
+        transform: rotate(-45deg);
+      }
+      .nav{
+        display: inline-block;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        background: rgb(22, 22, 22);
+        transition: .7s;
+        text-align: center;
+        ul {
+          padding-top: 80px;
+          transform: translate(-5%, 0px);
+          li {
+            list-style-type: none;
+            margin-top: 50px;
+            font-size: 30px;
+          }
+        }
+      }
+      .in{
+        transform: translateX(100%);
+      }
+      .header-nav {
+        display: none;
+      }
+    }
+    .header__para  {
+      left: 70px;
+    }
+  }
+/*--------------------- main--------------------- */
+  .card__content {
+    width: 100%;
+    .card-type1 {
+      position: relative;
+      .card-ttl {
+        width: 100px;
+        position: absolute;
+        top: 20%;
+        font-size: 20px;
+      }
+      .card-para{
+        display: none;
+      }
+    }
+    .card-type2 {
+      position: relative;
+      .card-ttl {
+        position: absolute;
+        top: 20%;
+        font-size: 20px;
+      }
+      .card-para{
+        display: none;
+      }
+    }
+    .card-type3 {
+      position: relative;
+      .card-ttl {
+        position: absolute;
+        top: 20%;
+        font-size: 20px;
+      }
+      .card-para{
+        display: none;
+      }
+    }
+  }
+
+  .style__content {
+    width: 100%;
+    height: 1700px;
+    .style__content-ttl {
+      padding: 85px 0px 0px 0px;
+      margin-left: 45px;
+      height: 105px;
+      width: 768px;
+    }
+    .style__content-box {
+      width: 100%;
+      .style__content-card1{
+        display: none;
+      }
+      .style__content-card2{
+        display: none;
+      }
+      .style__content-card1-2{
+        display: flex;
+        justify-content: center;
+        .style-pic {
+          margin: 0 6px;
+          .img-style {
+            width: 100%;
+          }
+        }
+      }
+      .style__content-card2-2{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        .style-pic {
+          margin: 0 6px;
+          .img-style {
+            width: 100%;
+          }
+        }
+      }
+      .style__content-card3-2{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        .style-pic {
+          margin: 0 6px;
+          .img-style {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .about__content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background: black;
+    .about-pic {
+      .img-about {
+        width: 250px;
+        height: 350px;
+        padding-left: 35px;
+        padding-top: 125px;
+      }
+    }
+    .about__content-para {
+      position: absolute;
+      top: 12%;
+      left: 40%;
+      color: white;
+      padding-right: 70px;
+      .para-ttl1 {
+        font-size: 24px;
+        margin-bottom: 22px;
+      }
+      .para-ttl2 {
+        font-size: 40px;
+        margin-bottom: 27px;
+      }
+      .para-txt1 {
+        margin-top: 60px;
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 22px;
+      }
+      .para-txt2 {
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 30px;
+      }
+      .button {
+        padding: 16px 40px;
+        color: white;
+        font-size: 16px;
+        border: solid 2px white;
+        background: black;
+      }
+      .button:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+      }
+    }
+  }
+  /*---------------------footer--------------------- */
+  .footer {
+    background: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    height: 43px;
+    font-size: 16px;
+    padding-top: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+/*--------------------- header--------------------- */
+  .header {
+    .header__pic {
+      display: none;
+    }
+    .firstview-sp {
+      position: relative;
+      .header__pic2 {
+        display: block;
+        height: 535px;
+        .img-header2 {
+          width: 100%;
+        }
+      }
+      .header__para2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline;
+        text-align: center;
+        color: white;
+        .header-para-txt1 {
+          width: 280px;
+          font-size: 55px;
+          font-weight: bold;
+        }
+        .header-para-txt2 {
+          font-size: 20px;
+          padding-top: 28px;
+        }
+      }
+    }
+    .header__txt {
+      position: fixed;
+      top: 0;
+      z-index: 100;
+      background: black;
+      width: 100%;
+      padding: 10px 40px;
+      .menu {
+        display: inline-block;
+        width: 36px;
+        height: 32px;
+        cursor: pointer;
+        z-index: 101;
+        .line-top,
+        .line-middle,
+        .line-bottom {
+          width: 33px;
+          height: 4px;
+          background:white;
+          border-radius: 20px;
+          position: absolute;
+          transition: 0.5s;
+        }
+        .line-top {
+          right: 130px;
+          top: 15px;
+        }
+        .line-middle {
+          right: 130px;
+          top: 27px;
+        }
+        .line-bottom {
+          right: 130px;
+          top: 39px;
+        }
+      }
+      .open span:nth-of-type(1) {
+        top: 39px;
+        transform: rotate(45deg);
+      }
+      .open span:nth-of-type(2) {
+        opacity: 0;
+      }
+      .open span:nth-of-type(3) {
+        top: 39px;
+        transform: rotate(-45deg);
+      }
+      .nav{
+        display: inline-block;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        background: rgb(22, 22, 22);
+        transition: .7s;
+        text-align: center;
+        ul {
+          padding-top: 80px;
+          transform: translate(-10%, 0px);
+          li {
+            list-style-type: none;
+            margin-top: 50px;
+            font-size: 30px;
+          }
+        }
+      }
+      .in{
+        transform: translateX(100%);
+      }
+      .header-nav {
+        display: none;
+      }
+    }
+    .header__para  {
+      display: none;
+    }
+  }
+/*--------------------- main--------------------- */
+  .card__content {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    .card-type1 {
+      position: relative;
+      .card-txt {
+        position: relative;
+        .card-ttl {
+          position: absolute;
+          top: -65px;
+          font-size: 20px;
+          z-index: 90;
+        }
+        .card-para{
+          display: none;
+        }
+      }
+    }
+    .card-type2 {
+      position: relative;
+      .card-txt {
+        position: relative;
+        .card-ttl {
+          position: absolute;
+          top: -65px;
+          font-size: 20px;
+          z-index: 90;
+        }
+        .card-para{
+          display: none;
+        }
+      }
+    }
+    .card-type3 {
+      position: relative;
+      .card-txt {
+        position: relative;
+        .card-ttl {
+          position: absolute;
+          top: -65px;
+          font-size: 20px;
+          z-index: 90;
+        }
+        .card-para{
+          display: none;
+        }
+      }
+    }
+  }
+
+  .style__content {
+    width: 100%;
+    height: auto;
+    padding-bottom: 80px;
+    .style__content-ttl {
+      padding: 85px 0px 0px 0px;
+      margin-left: 0px;
+      box-sizing: border-box;
+      padding-left: 17px;
+      height: 105px;
+      width: 100%;
+    }
+    .style__content-box {
+      width: 100%;
+      .style__content-card1{
+        display: none;
+      }
+      .style__content-card2{
+        display: none;
+      }
+      .style__content-card1-2{
+        margin-top: 85px;
+        display: flex;
+        justify-content: center;
+        .style-pic {
+          margin: 0 6px;
+          .img-style {
+            width: 100%;
+          }
+        }
+      }
+      .style__content-card2-2{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        .style-pic {
+          margin: 0 6px;
+          .img-style {
+            width: 100%;
+          }
+        }
+      }
+      .style__content-card3-2{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        .style-pic {
+          margin: 0 6px;
+          .img-style {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .about__content {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background: black;
+    .about-pic {
+      .img-about {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 50px 15px 0px 15px;
+        margin-bottom: 40px;
+      }
+    }
+    .about__content-para {
+      position: unset;
+      color: white;
+      padding-right: 0px;
+      text-align: center;
+      padding: 0 20px;
+      .para-ttl1 {
+        font-size: 24px;
+        margin-bottom: 22px;
+      }
+      .para-ttl2 {
+        font-size: 40px;
+        margin-bottom: 27px;
+      }
+      .para-txt1 {
+        margin-top: 60px;
+        font-size: 14px;
+        line-height: 25px;
+        margin-bottom: 22px;
+        
+      }
+      .para-txt2 {
+        font-size: 14px;
+        line-height: 25px;
+        margin-bottom: 30px;
+        
+      }
+      .button {
+        padding: 16px 40px;
+        color: white;
+        font-size: 14px;
+        border: solid 2px white;
+        background: black;
+      }
+      .button:hover {
+        opacity: 0.7;
+        transition: 0.3s;
+      }
+    }
+  }
+  /*---------------------footer--------------------- */
+  .footer {
+    background: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    height: 43px;
+    font-size: 14px;
+    margin-top: 80px;
+    padding-top: 20px;
+  }
+}
